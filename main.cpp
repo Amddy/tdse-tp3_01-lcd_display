@@ -1,13 +1,23 @@
 //=====[Libraries]=============================================================
+#include "display.h"
 
-#include "smart_home_system.h"
+static void userInterfaceDisplayInit();
 
 //=====[Main function, the program entry point after power on or reset]========
 
 int main()
 {
-    smartHomeSystemInit();
+    userInterfaceDisplayInit();
     while (true) {
-        smartHomeSystemUpdate();
     }
+}
+
+
+static void userInterfaceDisplayInit()
+{
+    displayInit( DISPLAY_CONNECTION_GPIO_4BITS );
+     
+    displayCharPositionWrite ( 0,0 );
+    displayStringWrite( "Hola Lucas" );
+
 }
