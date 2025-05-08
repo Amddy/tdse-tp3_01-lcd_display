@@ -18,6 +18,6 @@ static void userInterfaceDisplayInit()
     displayInit( DISPLAY_CONNECTION_GPIO_4BITS );
      
     displayCharPositionWrite ( 0,0 );
-    displayStringWrite( "Hola Lucas" );
+    displayStringWrite( "Display.txt" );
 
 }
